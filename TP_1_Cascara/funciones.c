@@ -65,22 +65,17 @@ float multiplicar(float num1, float num2)
 
 
 
-/** \brief Pregunta al usuario si desea continuar luego de realizar una acción
+/** \brief pregunta al usuario que hacer luego de realizar una acción
  *
- * \param int seguir (si/no)
- * \return int seguir devuelve el dato ingresado y muestra (o no) la ultima consulta
+ * \param void
+ * \return void
  */
-char continuar()
+void continuar(void)
 {
-    char seguir;
-    printf("Desea continuar? s/n: \n");
-    seguir = getch();
-    while(!(seguir == 's' || seguir == 'n'))
-    {
-            printf("Opcion incorrecta. Desea continuar? s/n: \n");
-            seguir = getch();
-    }
-    return seguir;
+    printf("*********************************\n");
+    printf("| Que operacion desea realizar? |\n");
+    printf("*********************************\n");
+
 }
 
 
