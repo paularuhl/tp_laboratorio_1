@@ -9,11 +9,12 @@ int main()
     char seguir='s';
     char opcion=0;
     float A, B, suma, resta, division, multiplicacion;
+    int flag = 0;
     printf("Bienvenido! Elija una de las siguientes opciones para comenzar: \n");
     while(seguir=='s')
     {
         double factorial = 1; //resets factorial
-        float i = 1; // resets i
+        float i = 1;  //Resets i
         printf("1- Ingresar 1er operando (A=x)\n");
         printf("2- Ingresar 2do operando (B=y)\n");
         printf("3- Calcular la suma (A+B)\n");
@@ -26,6 +27,7 @@ int main()
         opcion = getch();
 
         switch(opcion)
+
         {
             case '1':
                 A = pedirNumero("primer operando:");
@@ -33,6 +35,7 @@ int main()
                 break;
             case '2':
                 B = pedirNumero("segundo operando:");
+                flag = 1;
                 continuar();
                 break;
             case '3':
@@ -46,16 +49,24 @@ int main()
                 continuar();
                 break;
             case '5':
-                //division = dividir(A, B);  - no hay float q pueda devolver el error if B == 0
-                if(B==0)
+                while((flag==0) || (B==0))
                 {
+                    if(flag==0)
+                    {
+                    printf("Error! No ingreso un divisor.\n");
+                    break;
+                    } else {
                     printf("Error! No se puede dividir por cero.\n");
+                    break;
+                    }
                 }
-                else
+
+                if((flag!=0) && (B!=0))
                 {
-                    division = A / B;
+                    division = dividir(A, B);
                     printf("El resultado de %.2f dividido por %.2f es %.2f.\n", A, B, division);
                 }
+                continuar();
                 break;
             case '6':
                 multiplicacion = multiplicar(A, B);
@@ -88,15 +99,23 @@ int main()
                 multiplicacion = multiplicar(A, B);
                 printf("La suma entre %.2f y %.2f es %.2f.\n", A, B, suma);
                 printf("La resta entre %.2f y %.2f es %.2f.\n", A, B, resta);
-                if(B==0)
+                while((flag==0) || (B==0))
                 {
+                    if(flag==0)
+                    {
+                    printf("Error! No ingreso un divisor.\n");
+                    break;
+                    } else {
                     printf("Error! No se puede dividir por cero.\n");
+                    break;
+                    }
                 }
-                else
+                if((flag!=0) && (B!=0))
                 {
-                    division = A / B;
+                    division = dividir(A, B);
                     printf("El resultado de %.2f dividido por %.2f es %.2f.\n", A, B, division);
                 }
+
                 printf("El resultado de %.2f multiplicado por %.2f es %.2f.\n", A, B, multiplicacion);
 
                 if (A < 0)

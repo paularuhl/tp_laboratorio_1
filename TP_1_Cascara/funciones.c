@@ -75,35 +75,21 @@ void continuar(void)
     printf("*********************************\n");
     printf("| Que operacion desea realizar? |\n");
     printf("*********************************\n");
-
 }
 
-
-
-
-/*
-** \brief toma dos operandos ingresados anteriormente y realiza una division en orden de ingreso
+/** \brief toma dos operandos ingresados anteriormente y realiza una division en orden de ingreso
  *
  * \param num1 float -- 1er nro ingresado, dividendo
  * \param num2 float -- 2do nro ingresado, divisor
  * \return float -- resultado
- *
+ */
 float dividir(float num1, float num2)
 {
     float division;
-    switch(num2)
-    {
-        case 0:
-        printf("Error! No se puede dividir por cero.\n");
-            division = void
-            break;
-        default:
-            division = num1 / num2;
-            break;
-    }
-        return division;
+    division = num1 / num2;
+    return division;
 
-} */
+}
 ///RUHL PAULA INES
 ///40011750
 ///1° B

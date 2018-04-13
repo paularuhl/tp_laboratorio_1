@@ -7,11 +7,12 @@ float pedirNumero (char[]);
 float sumar(float, float);
 float restar(float, float);
 float multiplicar(float, float);
+float dividir(float, float);
 
 void continuar(void);
 
 
-//float dividir(float, float);
+
 ///RUHL PAULA INES
 ///40011750
 ///1° B
