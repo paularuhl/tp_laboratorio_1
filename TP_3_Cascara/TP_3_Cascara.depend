@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1528084438 source:c:\users\palu\desktop\utn\tps\tp_3\funciones.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1528083249 c:\users\palu\desktop\utn\tps\tp_3\funciones.h
+
+1527910446 source:c:\users\palu\desktop\utn\tps\tp_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1528471849 source:c:\users\palu\desktop\utn\tps\lla\tp_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1528471107 c:\users\palu\desktop\utn\tps\lla\tp_3\funciones.h
+
+1528471849 source:c:\users\palu\desktop\utn\tps\lla\tp_3\funciones.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	<stdlib.h>
+	"funciones.h"
+
